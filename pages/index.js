@@ -2,11 +2,12 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from "./index.module.css";
 import Link from 'next/link'
-
+import { useTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 export default function Home() {
 
-
+  const { t } = useTranslation();
 
   
 
@@ -14,7 +15,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Nieuwe Instituut CollectionBot</title>
+      <title>{t('title')}</title>
         <link rel="favicon" href="/favicon.png" />
         <meta property="og:image" content="/opengraph.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -37,8 +38,8 @@ export default function Home() {
         </header>
         <main className={styles.main}>
 
-        <h1 className={styles.title}><span className={styles.cerial}>Collecti</span>onBot</h1>
-        <p className={styles.intro}>This is a prototype application, testing the usage of the generative AI to disclose collection information.</p> 
+        <h1 className={styles.title}><span className={styles.cerial}>{t('mainTitle')}</span></h1>
+        <p className={styles.intro}>{t('intro')}</p> 
         
         <p className={styles.regular}>This website was made using the <a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">new ChatGPT API by OpenAI</a>. It prepends user questions with specific information about a collection item, allowing for a fair amount of control over the accuracy of the AI's response, while still benefiting from the AI's abilities to add all kinds of information in a customizable, conversational interface. The following collection items are available:</p>
 
@@ -58,11 +59,6 @@ export default function Home() {
 </div>
 
 
-        {/* <ul className={styles.list}><li className={styles.listitem}><Link href="/van-doesburg-interior-model">Van Doesburg's interior model for l'Aubette</Link></li>
-        <li className={styles.listitem}><Link href="/sonneveld-house">Sonneveld House</Link></li></ul> */}
-
-
-
         
      
 
@@ -70,4 +66,14 @@ export default function Home() {
       </main>
     </div>
   );
+}
+
+
+// Add the getServerSideProps function here
+export async function getServerSideProps({ locale }) {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['translation'])),
+    },
+  };
 }

@@ -5,5 +5,8 @@ module.exports = {
     defaultLocale: 'en',
     locales: ['en', 'nl'],
   },
-  localePath: path.resolve('./public/locales'),
+  webpack(config) {
+    config.resolve.modules.push(path.resolve('./'));
+    return config;
+  },
 };

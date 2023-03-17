@@ -1,9 +1,11 @@
+import i18n from '../i18n'; // import the i18next instance
 import { appWithTranslation } from 'next-i18next';
 import "./global.css";
 import React, { useEffect } from "react";
 
 
 import { init } from "@socialgouv/matomo-next";
+
 
 const MATOMO_URL = process.env.NEXT_PUBLIC_MATOMO_URL;
 const MATOMO_SITE_ID = process.env.NEXT_PUBLIC_MATOMO_SITE_ID;
