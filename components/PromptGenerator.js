@@ -69,8 +69,8 @@ const PromptGenerator = ({ onPromptSubmit }) => {
             <option value="Rem Koolhaas">Rem Koolhaas</option>
             <option value="Francine Houben">Francine Houben</option>
             <option value="Piet Boon">Piet Boon</option>
-            <option value="Marlies Rohmner">Marlies Rohmer</option>
-            <option value="Marcel wanders">Marcel Wanders</option>
+            <option value="Marlies Rohmer">Marlies Rohmer</option>
+            <option value="Marcel Wanders">Marcel Wanders</option>
           </select>
           </div>
         
