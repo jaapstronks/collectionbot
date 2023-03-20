@@ -29,11 +29,14 @@ export default function Home() {
     <Header />
   
     
-      
-      <main className={styles.main}>
-        <h1 className={styles.title}>{t('indextitle1')}<span className={styles.cerial}>{t('indextitle2')}</span></h1>
+    <div className="page">
+      <main  className={styles.main}>
+    <div className="main-title">
+        <h1 className="title">{t('indextitle1')}<span className="cerial">{t('indextitle2')}</span></h1>
+        </div>
+        <div className="content">
         <p className={styles.intro}>{t('intro')}</p> 
-        <p className={styles.regular}>{t('regular_1')}<a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">{t('regular_2')}</a>{t('regular_3')}</p>
+        <p className="regular">{t('regular_1')}<a href="https://openai.com/blog/introducing-chatgpt-and-whisper-apis">{t('regular_2')}</a>{t('regular_3')}</p>
 
         <h4 className={styles.subtitle}>{t('frontpageSubtitle')}</h4>
   
@@ -48,10 +51,16 @@ export default function Home() {
             <img src="/sonneveld.jpg" className={styles.cardImage} alt={t('sonneveld_alt')} />
             <div className={styles.titleWrapper}><h4 className={styles.cardTitle}>{t('sonneveld_title')}</h4></div>
           </Link>
+          <Link href="/generator" className={styles.card}>
+            <img src="/optimus.jpeg" className={styles.cardImage} alt={t('sonneveld_alt')} />
+            <div className={styles.titleWrapper}><h4 className={styles.cardTitle}>Design generator</h4></div>
+          </Link>
         </div>
 
         <p className={styles.disclaimer}>{t('disclaimer')}</p>
+        </div>
       </main>
+    </div>
     </div>
   );
 }

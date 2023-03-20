@@ -84,18 +84,14 @@ export default function Home() {
      
       <Header />
         <main className={styles.main}>
+<div className="page">
+        <h1 className="title">{t('sonneveldTitle1')}<span className="cerial">{t('sonneveldTitle2')}</span></h1>
+        <div className="content">
 
-        <h1 className={styles.title}><span className={styles.cerial}>{t('sonneveldTitle')}</span></h1>
-        <p className={styles.intro}>{t('sonneveldIntro')}</p> 
-        
-       
-
-
-        <h3>{t('sonneveldQuestion')}</h3>
-        <img src="/sonneveld.jpg" className={styles.image} alt="Sonneveld House" />
-        <p className={styles.caption}>{t('sonneveldCaption')}</p>
+         <img src="/sonneveld.jpg" className="contentimage" alt="Sonneveld House" />
+        <p className="caption">{t('sonneveldCaption')}</p>
       
-        <p className={styles.regular}>{t('sonneveldMoreInfo')}</p>
+        <p className="regular">{t('sonneveldMoreInfo')}</p>
         <div className={styles.listwrapper}>
         <ul className={styles.list}><li><strong>{t('sonneveldTip1Title')}</strong>: {t('sonneveldTip1Text')}</li><li> <strong>{t('sonneveldTip2Title')}</strong>: {t('sonneveldTip2Text')}</li> </ul>
         </div>
@@ -145,7 +141,7 @@ export default function Home() {
       <input type="submit" value={t('buttonText')} />
         </form>
 
-<p className={styles.disclaimer}>{t('disclaimertext')}</p>
+<p className={styles.disclaimer}>{t('disclaimertext')}</p></div></div>
       </main>
     </div>
   );
