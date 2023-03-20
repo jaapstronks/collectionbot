@@ -1,7 +1,7 @@
 .prompt {
-  flex: 0 0 440px;
+  flex: 0 0 500px;
   margin-top: 20px;
-  padding: 0 16px 32px;
+  padding: 16px 16px 32px;
   align-items: center;
   background-color: #ccf4fc;
 }
@@ -10,7 +10,12 @@
   display: flex;
  
 }
-
+.form {
+  margin-bottom: 24px;
+}
+.formtitle {
+  margin-top: 0;
+}
 .promptinput {
   font-size: 18px;
   height: 28px;
@@ -45,7 +50,7 @@
 
 .question {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-bottom: 20px;
   align-items: center;
 }
@@ -65,9 +70,3 @@ p.response  {
   border-radius: 8px;
 }
 
-@media only screen and (max-width: 840px) {
-
-  .question {
-    justify-content:flex-start;
-  }
-}
