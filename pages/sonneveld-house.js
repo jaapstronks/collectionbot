@@ -140,8 +140,7 @@ export default function Home() {
    
       <input type="submit" value={t('buttonText')} />
         </form>
-
-<p className={styles.disclaimer}>{t('disclaimertext')}</p></div></div>
+</div></div>
       </main>
     </div>
   );

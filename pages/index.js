@@ -54,7 +54,7 @@ export default function Home() {
           </Link>
         </div>
 
-        <p className={styles.disclaimer}>{t('disclaimer')}</p>
+
         </div>
       </main>
     </div>

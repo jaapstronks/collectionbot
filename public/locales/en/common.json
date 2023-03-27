@@ -11,7 +11,6 @@
   "van_doesburg_alt": "Van Doesburg's interior model for l'Aubette",
   "sonneveld_title": "Sonneveld House",
   "sonneveld_alt": "Sonneveld House",
-  "disclaimer": "This prototype was made by Jaap Stronks.",
   "sonneveldTitle1": "Sonneveld H",
   "sonneveldTitle2": "ouse",
   "sonneveldTwitterTitle": "House Sonneveld",
@@ -48,6 +47,5 @@
   "frontpageSubtitle": "Choose a collection item:",
   "questionLabel": "Ask a question about this object",
   "eli5label": "Explain it like I'm five",
-  "buttonText": "Get an answer",
-  "disclaimertext": "This prototype was made by Jaap Stronks."
+  "buttonText": "Get an answer"
 }
